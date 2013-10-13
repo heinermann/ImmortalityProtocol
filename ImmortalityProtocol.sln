@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImmortalityProtocol", "ImmortalityProtocol\ImmortalityProtocol.vcxproj", "{988E4CCF-4B61-4358-B8C2-6A24EBA10FF1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5A8BDAF0-55FE-41A1-ACE4-10C2C1D25CBF} = {5A8BDAF0-55FE-41A1-ACE4-10C2C1D25CBF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libdisasm", "libdisasm\libdisasm.vcxproj", "{5A8BDAF0-55FE-41A1-ACE4-10C2C1D25CBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A8BDAF0-55FE-41A1-ACE4-10C2C1D25CBF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5A8BDAF0-55FE-41A1-ACE4-10C2C1D25CBF}.Debug|Win32.Build.0 = Debug|Win32
+		{5A8BDAF0-55FE-41A1-ACE4-10C2C1D25CBF}.Release|Win32.ActiveCfg = Release|Win32
+		{5A8BDAF0-55FE-41A1-ACE4-10C2C1D25CBF}.Release|Win32.Build.0 = Release|Win32
+		{988E4CCF-4B61-4358-B8C2-6A24EBA10FF1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{988E4CCF-4B61-4358-B8C2-6A24EBA10FF1}.Debug|Win32.Build.0 = Debug|Win32
+		{988E4CCF-4B61-4358-B8C2-6A24EBA10FF1}.Release|Win32.ActiveCfg = Release|Win32
+		{988E4CCF-4B61-4358-B8C2-6A24EBA10FF1}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

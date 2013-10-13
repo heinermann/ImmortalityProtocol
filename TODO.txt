@@ -1,0 +1,25 @@
+<windows.h>
+  AddVectoredExceptionHandler
+
+<csignal>
+  signal        // Returns prev; void cb(int param)
+    SIGABRT
+    SIGFPE      // must declare a float: volatile double d = 0.0f; 
+    SIGILL      // unused
+    SIGSEGV     // unused
+    SIGTERM     // unused
+
+<cstdlib>
+  _set_invalid_parameter_handler    // Returns prev; void cb(const wchar_t *expr, const wchar_t *func, const wchar_t *file,
+                                    // unsigned int line, uintptr_t pReserved)
+  _set_purecall_handler           // Returns prev; void cb()
+  
+<new.h>
+  _set_new_handler          // Returns prev; int cb(size_t amount)     where retval is 0 if failed
+  _set_new_mode(1)
+  
+<eh.h>
+  set_terminate             // Returns prev; void cb()
+  set_unexpected            // Returns prev; void cb()
+  _set_se_translator        // Thread-specific (maybe later?)
+  
