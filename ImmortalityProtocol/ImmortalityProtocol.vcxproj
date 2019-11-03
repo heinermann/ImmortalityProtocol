@@ -22,13 +22,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -85,14 +85,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CallbackManager.cpp" />
     <ClCompile Include="Callbacks.cpp" />
     <ClCompile Include="Disassembler.cpp" />
     <ClCompile Include="ExceptionContext.cpp" />
     <ClCompile Include="ImmortalExceptionFilter.cpp" />
     <ClCompile Include="Instruction.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="ModuleManager.cpp" />
     <ClCompile Include="ThreadManager.cpp" />
     <ClCompile Include="TopLevelExceptionFilter.cpp" />
     <ClCompile Include="WatchDog.cpp" />
