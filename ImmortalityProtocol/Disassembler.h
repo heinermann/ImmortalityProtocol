@@ -8,7 +8,7 @@ namespace x86
   class Disassembler
   {
   public:
-    Disassembler(enum x86_options options = x86_options::opt_none, DISASM_REPORTER reporter = nullptr, void *arg = nullptr);
+    Disassembler(x86_options options = x86_options::opt_none, DISASM_REPORTER reporter = nullptr, void *arg = nullptr);
     ~Disassembler();
 
     int disasm(void *buf, unsigned int buf_len, uint32_t buf_rva, unsigned int offset, Instruction *insn) const;

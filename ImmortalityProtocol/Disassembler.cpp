@@ -6,7 +6,7 @@ namespace x86
   Disassembler dasm(x86_options::opt_ignore_nulls);
 
 
-  Disassembler::Disassembler(enum x86_options options, DISASM_REPORTER reporter, void *arg)
+  Disassembler::Disassembler(x86_options options, DISASM_REPORTER reporter, void *arg)
   {
     x86_init(options, reporter, arg);
   }

@@ -1,4 +1,5 @@
 #include <Windows.h>
+#include <atomic>
 
 class TopLevelExceptionFilter;
 
@@ -11,3 +12,5 @@ inline ULARGE_INTEGER make_ularge(const FILETIME &ft)
 }
 
 extern TopLevelExceptionFilter TopExceptionFilter;
+
+extern std::atomic<HINSTANCE> hDllInstance;

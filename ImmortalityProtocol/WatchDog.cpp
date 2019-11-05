@@ -1,11 +1,13 @@
 #include "WatchDog.h"
-#include <thread>
+#include <atomic>
 #include <sstream>
 
 #include "ThreadManager.h"
 #include "Main.h"
 
 #define WATCHDOG_ERR (0x7DADAB0B)
+
+std::atomic_bool killthread = false;
 
 BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam)
 {
@@ -44,7 +46,7 @@ ULARGE_INTEGER gTimeDiff;
 //void ThreadWatchdog()
 DWORD WINAPI ThreadWatchdog(LPVOID lpParameter)
 {
-  for (;;)  // always do this
+  while (!killthread)  // always do this
   {
     FILETIME currentFileTime;
     // run once
@@ -83,7 +85,7 @@ DWORD WINAPI ThreadWatchdog(LPVOID lpParameter)
     // Save last system time
     GetSystemTimeAsFileTime(&currentFileTime);
     lastFileTime = make_ularge(currentFileTime);
-
   }
+  FreeLibraryAndExitThread(hDllInstance, 0);
   return 0;
 }

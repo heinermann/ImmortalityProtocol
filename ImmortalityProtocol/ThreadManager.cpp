@@ -59,7 +59,7 @@ Thread::~Thread()
 void ShowLastError(const char *pszStr)
 {
   std::stringstream ss;
-  char *pszErr = "Unknown error";
+  const char *pszErr = "Unknown error";
   
   FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_ALLOCATE_BUFFER, nullptr, GetLastError(), 0, (LPSTR)&pszErr, 0, nullptr);
   ss << pszStr << " :" << std::endl;
@@ -189,9 +189,11 @@ void Thread::breakInfiniteLoop()
   // Iterate instructions from the instruction pointer
   x86::Register eip(ctx.Eip);
 
-  std::ostringstream ss;
-  ss << (void*)eip;
-  MessageBox(nullptr, ss.str().c_str(), nullptr, MB_OK);
+  {
+    std::ostringstream ss;
+    ss << (void*)eip;
+    MessageBox(nullptr, ss.str().c_str(), nullptr, MB_OK);
+  }
 
   bool hasBroken = false;
   while ( !hasBroken )
